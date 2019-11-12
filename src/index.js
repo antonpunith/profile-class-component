@@ -8,7 +8,9 @@ const user = {
   name: "Brian",
   interests: "Reading, Swimming, Technology",
   age: 9,
-  image: "https://i.pravatar.cc/200?img=4"
+  image: "https://i.pravatar.cc/200?img=4",
+  color: "Red",
+  movie: "Star Wars"
 };
 
 ReactDOM.render(<Profile user={user} />, document.getElementById("root"));

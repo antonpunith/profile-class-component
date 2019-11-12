@@ -4,19 +4,30 @@ import "./profile.css";
 
 class Profile extends Component {
   render() {
+    const { name, image, age, interests, color, movie } = this.props.user;
     return (
       <section class="profile">
         <header>
-          <h1>{this.props.user.name}</h1>
+          <h1>{name}</h1>
         </header>
         <div class="profile-content">
-          <img src={this.props.user.image} alt={this.props.user.name} />
-          <p>
-            <strong>Age:</strong> {this.props.user.age}
-          </p>
-          <p>
-            <strong>Interests:</strong> {this.props.user.interests}
-          </p>
+          <div class="profile-image">
+            <img src={image} alt={name} />
+          </div>
+          <div>
+            <p>
+              <strong>Age:</strong> {age}
+            </p>
+            <p>
+              <strong>Interests:</strong> {interests}
+            </p>
+            <p>
+              <strong>Favourite Color:</strong> {color}
+            </p>
+            <p>
+              <strong>Favourite Movie:</strong> {movie}
+            </p>
+          </div>
         </div>
       </section>
     );
